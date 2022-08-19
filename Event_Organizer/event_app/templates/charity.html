@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+<div class="container">
+      {% for ch in charity %}
+        <h2>{{ch.event_type}}</h2>
+        <img src="{{ch.image.url}}" class="w-100">
+        <p>Description: {{ch.desc}}</p>
+        <p>Food: {{ch.food}}</p>
+        <p>Sponser: {{ch.sponser}}</p>
+        <p>User: {{ch.user}}</p>
+      {% endfor %}
+    </div>

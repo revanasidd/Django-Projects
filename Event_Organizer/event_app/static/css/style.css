@@ -1,0 +1,50 @@
+section.family {
+    background: #abdda2;
+    padding: 30px;
+}
+.charity {
+    background: #8ad8c0;
+    padding: 30px;
+}
+
+.top_nav {
+    background: #8ad8c0;
+    /* padding: 30px; */
+}
+
+.top_nav ul {
+    list-style: none;
+}
+.contact {
+    background: black;
+    color: white;
+}
+.my_event {
+    border: 1px solid #d5cece;
+    border-radius: 8px;
+    padding: 10px 10px;
+    margin-top: 20px;
+}
+.main {
+    background-image: url("https://source.unsplash.com/user/erondu/1600x900");
+
+    /* background-image: url("https://source.unsplash.com/WLUHO9A_xik/1600x900"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body {
+    background-image: url("https://source.unsplash.com/user/erondu/1600x900");
+    background-attachment: fixed;
+}
+
+.contact_us {
+    background: white;
+    padding: 10px;
+    font-weight: 900;
+}
+.about {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+}

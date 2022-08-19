@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+{% block content %}
+      <div class="container">
+        {% for fm in family %}
+          <h2>{{fm.event_type}}</h2>
+          <img src="{{fm.image.url}}" class="w-100">
+          <p>Description: {{cl.desc}}</p>
+          <p>Food: {{fm.food}}</p>
+          <p>Decoration: {{fm.sponser}}</p>
+        {% endfor %}
+      </div>
+      {% endblock content %}

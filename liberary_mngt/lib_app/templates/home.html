@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="header">
+        <div class="container">
+            <div class="header_txt text-center">
+            <h2>Issue a Book</h2>
+            <a href="{% url 'book_issue' %}" class="btn btn-primary btn-lg">Issue your book</a>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

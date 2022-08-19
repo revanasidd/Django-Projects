@@ -1,0 +1,23 @@
+<style>
+    table,td,tr, th{
+        padding: 3px;
+        border:1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll Number</th>
+    </tr>
+    {% for shubham in list %}
+    <tr>
+        <td>{{shubham.id}}</td>
+        <td>{{shubham.name}}</td>
+        <td>{{shubham.roll_num}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href='form'>Back To Form</a>
+

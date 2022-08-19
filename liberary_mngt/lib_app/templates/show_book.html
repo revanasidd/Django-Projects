@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="profile">
+                <h3>{{request.user.first_name|title}} {{request.user.last_name|title}}</h3>
+                <p>{{request.user.email}}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            {% for b in book %}
+            <div class="issued_book">
+                <p>Course: {{b.course}}</p>
+                <p>Book: {{b.book}}</p>
+                <p>Roll Number: {{b.roll_no}}</p>
+                <p>Phone: {{b.phone}}</p>
+                <p>Issue Date: {{b.issue_date}}</p>
+                <p>Submit Date: {{b.submit_date}}</p>
+                <a href="{% url 'delete' b.id %}">Delete</a>
+                {{price}}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+<style>
+    table,td,tr, th{
+        padding: 3px;
+        border:1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>quantity</th>
+        <th>price</th>
+    </tr>
+    {% for shubham in data %}
+    <tr>
+        <td>{{shubham.id}}</td>
+        <td>{{shubham.name}}</td>
+        <td>{{shubham.quantity}}</td>
+        <td>{{shubham.price}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href='form'>Back To Form</a>
+

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+    <th>id</th>
+    <th>name</th>
+    <th>source</th>
+    <th>destination</th>
+    <th>time</th>
+    <th>date</th>
+    <th><a href="form">Add new</a></th>
+    {% for d in data %}
+    <tr>
+        <td>{{d.id}}</td>
+        <td>{{d.name}}</td>
+        <td>{{d.source}}</td>
+        <td>{{d.destination}}</td>
+        <td>{{d.time}}</td>
+        <td>{{d.date}}</td>
+        <td><a href="{% url 'update' d.id %}">Edit</td>
+        <td><a href="{% url 'delete' d.id %}">Delete</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

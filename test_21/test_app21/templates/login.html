@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form action="" method="post">
+                {% csrf_token %}
+                
+                <label for="">Username</label>
+                <input type="text" name="username">
+                
+                <label for="">Password</label>
+                <input type="password" name="password">
+
+                <button type="submit">Login Now</button>
+                <label for="">Remember me</label>
+                <input type="checkbox" name="signmeup" id="">
+                {% for msg in messages %}
+                    {{msg}}
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      {% for event in data %}
+      <div class="my_event">
+        <h3>{{event.name}}</h3>
+        <p>Event Type: {{event.event}}</p>
+        <p>Number of people: {{event.people}}</p>
+        <p>On date: {{event.date}}</p>
+        <p>Your event: {{event.event}}</p>
+        <p>Address: {{event.address}}</p>
+      </div>
+      <a href="{% url 'update' event.id %}">Edit</a>
+      <a href="{% url 'delete' event.id %}">Delete</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

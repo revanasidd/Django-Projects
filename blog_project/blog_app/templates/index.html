@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    {% for d in data %}
+<h1> {{d.blog_heading}} </h1>
+<p>{{d.pub_desc}}</p>
+{{d.blog_image.url}}
+<p><img src="{{d.blog_image.url}}" alt=""></p>
+<img src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+<h3>{{d.publisher_name}}</h3>
+{% endfor %}
+</div>
+
+{% endblock %}

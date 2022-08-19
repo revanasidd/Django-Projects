@@ -1,0 +1,21 @@
+.header {
+    background-image: url(http://127.0.0.1:8000/static/images/image-of-man.jpg);
+    height: 90vh;
+    position: relative;
+}
+.header_txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.header_txt h2 {
+    font-size: 55px;
+}
+.issued_book, .profile {
+    border: 1px solid rgb(224, 221, 221);
+    padding: 5px;
+    border-radius: 7px;
+    margin-top: 20px;
+}

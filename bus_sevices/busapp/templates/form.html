@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="p-5">
+<form action="" method="post">
+    <h2>Book Your Ticket</h2>
+    {% csrf_token %}
+    <div class="row">
+    <div class="col-md-6">
+        {{form.id | as_crispy_field}}
+    </div>
+    <div class="col-md-6">
+    {{form.name | as_crispy_field}}
+    </div>
+    <div class="col-md-6">
+        {{form.source | as_crispy_field}}
+    </div>
+    <div class="col-md-6">
+        {{form.destination | as_crispy_field}}
+    </div>
+    <div class="col-md-6">
+        {{form.time | as_crispy_field}}
+    </div>
+    <div class="col-md-6">
+        {{form.date | as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-primary btn-block">Book Ticket</button>
+        </div>
+        <div class="col-md-6">
+            <a href="list" class="btn btn-dark btn-block">Show Ticket</a>
+        </div>
+    </div>
+</form>
+</div>
+{% endblock %}

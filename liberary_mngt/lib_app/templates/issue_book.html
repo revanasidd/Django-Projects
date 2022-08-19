@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% comment %} <label for="">Student Name</label>
+                    <input type="text" class="form-control" name="student_name">
+                    <label for="">Course</label>
+                    <input type="text" class="form-control" name="course">
+                    <label for="">Book</label>
+                    <select class="form-control" name="book" id="">
+                        <option value="">Select Book</option> {% endcomment %}
+                        {% comment %} {% for book in books %}
+                            <option value="{{book}}">{{book}}</option>
+                        {% endfor %} {% endcomment %}
+                        {{form.as_p}}
+                    {% comment %} </select>
+                    <label for="">Roll Number</label>
+                    <input type="text" class="form-control" name="roll_no">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" name="email">
+                    <label for="">Phone</label>
+                    <input type="tel" class="form-control" name="phone">
+                    <label for="">Issue Date</label>
+                    <input type="date" class="form-control" name="issue_date">
+                    <label for="">Submit Date</label>
+                    <input type="date" class="form-control" name="submit_date">
+
+                    <button type="submit" class="btn btn-primary btn-block mt-4">Issue Your Book</button> {% endcomment %}
+                    {% for msg in messages %}
+                        {{msg}}
+                    {% endfor %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

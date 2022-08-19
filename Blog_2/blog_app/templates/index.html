@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+{% for d in data %}
+<h1>{{d.heading}}</h1>
+<img src="{{d.image.url}}" class="w-100" alt="">
+<p>{{d.desc}}</p>
+<p>{{d.name}}, {{d.date}}</p>
+<p></p>
+{% endfor %}
+</div>
+{% endblock content %}

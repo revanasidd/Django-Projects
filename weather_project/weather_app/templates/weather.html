@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = 'container center'>
+<div class="content_wrapper" id="app">
+    <div v-if="infos.city">
+        <h1><i class="bi bi-cloud-lightning-rain"> Check live Weather </i>
+        <div class="date"></div>
+        </h1><br>
+    </div>
+    <div class="row">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" class="form-control" placeholder="Enter your city name..." name="city">
+            <button  class = 'btn-primary' type="submit"><i class="bi bi-cloud-lightning-rain"> Submit</i></button>
+        </form><br>
+
+        <div class="weather_card">
+            <div class="weather_card_infos_title">
+                {{data.city}}, {{data.country}}, {{data.description}}, {{data.wind}}km/hr
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}
